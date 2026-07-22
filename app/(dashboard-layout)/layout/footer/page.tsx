@@ -18,7 +18,7 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground">
                 © 2026 by{" "}
                 <Link
-                    href="https://www.wrappixel.com/" target="_blank"
+                    href="https://shadcndashboard.dev/" target="_blank"
                     className="hover:text-primary text-muted-foreground"
                 >
                     shadcndashboard
