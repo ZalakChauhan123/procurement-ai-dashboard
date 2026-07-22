@@ -1,7 +1,7 @@
 ---
 name: shadcn-dashboard
 description: |
-  Guide for building pages, features, tables, forms, API routes, and navigation in this Next.js 16 App Router + React 19 shadcn/Base UI admin dashboard. Use this skill whenever the user wants to add a new page, wire up an API route, build a data table, add a form, configure the sidebar, add charts, or work with this dashboard's existing conventions. Also triggers when the user asks about icon usage, theming (dark/light), or whether a listed feature (CASL, drag-and-drop, ApexCharts, Recharts, AI SDK) is actually implemented. Even if the user doesn't say "dashboard" explicitly — if they're adding UI, pages, or features to this project, use this skill.
+  Guide for building pages, features, tables, forms, API routes, and navigation in this Next.js 16 App Router + React 19 shadcn/Base UI admin dashboard. Use this skill whenever the user wants to add a new page, wire up an API route, build a data table, add a form, configure the sidebar, add charts, or work with this dashboard's existing conventions. Also triggers when the user asks about icon usage or theming (dark/light). Even if the user doesn't say "dashboard" explicitly — if they're adding UI, pages, or features to this project, use this skill.
 ---
 
 # Shadcn Dashboard (Next.js) Development Guide
@@ -26,7 +26,7 @@ This skill encodes the exact patterns and conventions used in this Next.js App R
 
 ## Adding a New Feature
 
-1. Add a Route Handler at `app/api/<name>/route.ts` (plus a `<name>-data.ts` helper if it needs static/seed data, following `app/api/ecommerce/product-data.ts`).
+1. Add a Route Handler at `app/api/<name>/route.ts` (plus a `<name>-data.ts` helper if it needs static/seed data, following `app/api/blog/route.ts`).
 2. Create a context in `app/context/<name>-context/` that fetches via `useSWR` + the shared fetchers in `app/api/global-fetcher.ts`, exposing state + setters.
 3. Build the view under `app/(dashboard-layout)/apps/<name>/` (or the appropriate `pages/` subfolder), composing components from `app/components/<name>/` and shadcn primitives from `components/ui/`.
 4. Since routing is file-based, adding `page.tsx` in the right folder is enough — no manual route registration.
@@ -44,29 +44,15 @@ Use the wrappers in `app/components/tables/` (e.g. `DataTable.tsx`) which wrap T
 
 ## Forms
 
-Use `react-hook-form` + `zod` via `@hookform/resolvers`, following `app/(dashboard-layout)/pages/form/` as the reference pattern (Input/Select/Switch/Checkbox/RadioGroup/Calendar primitives from `components/ui/`).
+Use plain `useState` + shadcn UI primitives (`Input`, `Select`, `Switch`, `Checkbox`, `RadioGroup`, `Calendar` from `components/ui/`), following `app/(dashboard-layout)/pages/form/` as the reference pattern.
 
 ## Charts
 
-Both charting libraries are genuinely used in this repo — check the feature before picking one:
-
 - `recharts` — dashboard widgets, e.g. `app/components/dashboards/modern/total-sales.tsx`, `totals-assets.tsx`
-- `apexcharts` / `react-apexcharts` — ecommerce product chart, `app/components/apps/ecommerce/editproduct/product-chart.tsx`
 
 ## Icons
 
-`components.json` configures `lucide-react` as the default icon library. `@iconify/react` also appears in several existing components (tables, dashboards, ecommerce). Match whichever the file you're editing already imports.
-
-## AI Integration
-
-`app/api/chat-ai/` and `app/api/image-ai/` call Google's GenAI SDKs (`@google/genai`, `@google/generative-ai`) — this is real, wired-up functionality, not dead dependency weight. Check `app/api/chat-ai/gemini.ts` for the existing client setup before adding new AI-backed routes.
-
-## Features That Look Implemented But Aren't
-
-These packages are in `package.json` but have no actual usage in `app/` — verify with a grep before assuming the feature exists or building on top of it:
-
-- `@casl/ability` / `@casl/react` — no CASL-based RBAC/permissions
-- `@dnd-kit/*`, `@hello-pangea/dnd` — no drag-and-drop UI (a `kanban` API route exists under `app/api/kanban/` but has no page consuming it yet)
+`components.json` configures `lucide-react` as the default icon library. `@iconify/react` also appears in several existing components (tables, dashboards). Match whichever the file you're editing already imports.
 
 ## Code Conventions
 

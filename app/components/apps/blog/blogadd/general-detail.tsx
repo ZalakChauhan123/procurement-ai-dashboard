@@ -2,7 +2,7 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-import TiptapEdit from "@/app/components/apps/ecommerce/editor/tiptap-edit";
+import TiptapEdit from "@/app/components/shared/editor/tiptap-edit";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const GeneralDetail = () => {

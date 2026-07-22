@@ -41,11 +41,8 @@ Shadcn Dashboard is built with Next.js (App Router), offering a production-ready
 - **Tailwind CSS v4** - Easy theming and utility-based styling
 - **Responsive & Mobile-First** - Designed to look great on all devices
 - **Dark Mode Support** - Full light/dark theme toggle via `next-themes`
-- **Role-Based Access** - CASL-powered permissions system built in
-- **Rich Charting** - ApexCharts & Recharts integration for beautiful visualizations
-- **Drag & Drop** - `@dnd-kit` and `@hello-pangea/dnd` for interactive UIs
-- **Rich Text Editor** - TipTap-powered editor for Blog & Notes apps
-- **AI Integration** - Google Generative AI SDK included
+- **Rich Charting** - Recharts integration for beautiful visualizations
+- **Rich Text Editor** - TipTap-powered editor for the Blog app
 
 ## Folder Structure
 
@@ -55,7 +52,7 @@ Shadcn Dashboard is built with Next.js (App Router), offering a production-ready
 |   |-- globals.css                            # Tailwind CSS, CSS variables, and theme tokens
 |   |-- layout.tsx                             # Root layout, fonts, metadata, and providers
 |   |-- not-found.tsx                          # Custom 404 page
-|   |-- api/                                   # Route handlers (blog, notes, tickets, kanban, ecommerce, chat-ai, etc.)
+|   |-- api/                                   # Route handlers (blog, notes, tickets)
 |   |-- auth/                                  # Auth routes (outside dashboard shell)
 |   |   |-- auth2/                             # Two-factor authentication pages
 |   |   |-- authforms/                         # Login, Register, Forgot Password, etc.
@@ -77,7 +74,7 @@ Shadcn Dashboard is built with Next.js (App Router), offering a production-ready
 |   |   |-- shared/                            # Shared cards, dialogs, and wrappers
 |   |   |-- tables/                            # Data table components
 |   |   |-- user-profile/                      # User profile components
-|   |-- context/                               # React context providers (blog, notes, tickets, ecommerce, userdata)
+|   |-- context/                               # React context providers (blog, notes, tickets)
 |   |-- css/                                   # Page and style-specific CSS
 |-- components/                                # Shared, non-app-scoped React components
 |   |-- ui/                                    # shadcn/ui primitives
@@ -126,18 +123,16 @@ Shadcn Dashboard is built with Next.js (App Router), offering a production-ready
   - Maintenance Page
 - Components
   - Shadcn UI Primitives
-  - ApexCharts & Recharts
+  - Recharts
   - TipTap Rich Text Editor
-  - Drag & Drop (DnD Kit + Hello Pangea)
   - Data Tables (TanStack Table)
   - Date Pickers & Calendar
   - File Dropzone
   - OTP Input
 - Miscellaneous
   - Icons Showcase
-  - Dark / Light Mode
-  - Role-Based Access (CASL)
-  - AI Integration (Google GenAI)
+  - Dark / Light Mode 
+  
 
 ## 🚀 Quick Start
 
@@ -243,9 +238,6 @@ We are grateful for the contributions of the open-source community, particularly
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Next.js](https://nextjs.org/)
 - [Base UI](https://mui.com/base-ui/)
-- [TanStack Table](https://tanstack.com/table)
-- [ApexCharts](https://apexcharts.com/)
-- [TipTap](https://tiptap.dev/)
 
 These projects form the backbone of Shadcn Dashboard.
 
