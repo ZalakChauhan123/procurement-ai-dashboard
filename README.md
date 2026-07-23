@@ -125,7 +125,7 @@ Shadcn Dashboard is built with Next.js (App Router), offering a production-ready
   - Shadcn UI Primitives
   - Recharts
   - TipTap Rich Text Editor
-  - Data Tables (TanStack Table)
+  - Data Tables
   - Date Pickers & Calendar
   - File Dropzone
   - OTP Input
