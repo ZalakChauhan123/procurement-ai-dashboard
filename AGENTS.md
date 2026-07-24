@@ -18,7 +18,7 @@ This file provides essential information for AI coding agents working on this pr
 - **Charts**: `recharts` (see below)
 - **Icons**: `lucide-react` is the configured default (`components.json` → `iconLibrary: "lucide"`); `@iconify/react` also appears in some components
 - **Rich text**: `@tiptap/*`, used in the blog post editor (`app/components/shared/editor/tiptap-edit.tsx`)
-- **Package Manager**: pnpm (`pnpm-lock.yaml` is the lockfile of record; a `package-lock.json` also exists but pnpm is primary)
+- **Package Manager**: pnpm (`pnpm-lock.yaml` is the lockfile of record)
 
 This repo has a real backend layer: `app/api/**/route.ts` Route Handlers, not a mocked SPA.
 
@@ -149,7 +149,5 @@ ESLint flat config (`eslint.config.mjs`) extends `eslint-config-next` (`core-web
 - [Next.js](https://nextjs.org/docs)
 - [Tailwind CSS v4](https://tailwindcss.com/docs)
 - [Base UI](https://base-ui.com/)
-- [TanStack Table](https://tanstack.com/table/latest)
 - [Recharts](https://recharts.org/)
-- [TipTap](https://tiptap.dev/)
 - [SWR](https://swr.vercel.app/)
