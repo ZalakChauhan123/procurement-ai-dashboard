@@ -1,10 +1,11 @@
 # CLAUDE.md
 
-This is a Next.js 16 (App Router) + React 19 + TypeScript admin dashboard ("Shadcn Dashboard"), styled with Tailwind CSS v4 and Shadcn UI / Base UI primitives. It uses real Next.js Route Handlers under `app/api` as its backend (not a mocked SPA), deployed as a standard Next.js app.
+This is a Next.js 16.3 (App Router) + React 19 + TypeScript 7 admin dashboard ("Shadcn Dashboard"), styled with Tailwind CSS v4 and Shadcn UI / Base UI primitives. It uses real Next.js Route Handlers under `app/api` as its backend (not a mocked SPA), deployed as a standard Next.js app.
 
 ## Stack
 
-- **Framework**: Next.js 16 App Router, TypeScript, compiled/type-checked as part of `next build`
+- **Framework**: Next.js 16.3 App Router, TypeScript 7, type-checked as part of `next build`
+- **Instant Navigations**: `cacheComponents` + `partialPrefetching` enabled; prefer Suspense/`loading.tsx` shells and `'use cache'` for static shell content
 - **Routing**: File-based App Router — route groups `app/auth/` (standalone) and `app/(dashboard-layout)/` (sidebar + header shell)
 - **UI**: Shadcn UI / Base UI primitives (`@base-ui/react`), Tailwind CSS v4, `class-variance-authority`, `tailwind-merge`
 - **Forms**: plain `useState` + shadcn UI primitives (`Input`, `Select`, `Switch`, `Checkbox`, `RadioGroup`, `Calendar`) — see `app/(dashboard-layout)/pages/form/page.tsx`

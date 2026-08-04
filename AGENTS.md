@@ -8,8 +8,9 @@ This file provides essential information for AI coding agents working on this pr
 
 **Shadcn Dashboard** is a Next.js admin dashboard built with:
 
-- **Framework**: Next.js 16 (App Router), React 19
-- **Language**: TypeScript, type-checked as part of `next build`
+- **Framework**: Next.js 16.3 (App Router), React 19
+- **Language**: TypeScript 7, type-checked via CLI as part of `next build`
+- **Instant Navigations**: `cacheComponents` + `partialPrefetching` in `next.config.ts`
 - **Routing**: File-based App Router — `app/auth/` (standalone auth pages) and `app/(dashboard-layout)/` (sidebar + header shell)
 - **Styling**: Tailwind CSS v4
 - **UI Components**: Shadcn UI-style primitives on Base UI (`@base-ui/react`)

@@ -5,6 +5,7 @@ import { Geist } from "next/font/google";
 import "./globals.css"
 import NextTopLoader from "nextjs-toploader";
 import { ThemeProvider } from "@/components/Themeprovider";
+import { OfflineBanner } from "@/app/components/shared/offline-banner";
 
 
 const geist = Geist({
@@ -60,6 +61,7 @@ export default function RootLayout({
           enableSystem={false}
         >
           {children}
+          <OfflineBanner />
         </ThemeProvider>
       </body>
     </html>

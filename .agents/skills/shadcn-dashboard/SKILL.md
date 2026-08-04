@@ -58,6 +58,7 @@ Use plain `useState` + shadcn UI primitives (`Input`, `Select`, `Switch`, `Check
 
 - Use `cn()` from `lib/utils.ts` for class merging — never concatenate className strings.
 - Path alias `@/*` resolves to the project root — match the convention already used in the file you're editing.
-- `pnpm build` runs Next's type-check before the production build; type errors block it.
+- `pnpm build` runs Next's type-check before the production build (TypeScript 7 CLI); type errors block it.
 - `pnpm lint` runs ESLint (flat config extending `eslint-config-next`) — fix warnings, don't suppress them.
 - Package manager is **pnpm** (`pnpm-lock.yaml`) — don't introduce npm/yarn/bun lockfiles or commands.
+- **Instant Navigations** (Next 16.3): `cacheComponents` + `partialPrefetching` are on. Prefer `loading.tsx` shells, wrap `usePathname`/`useSearchParams` in `<Suspense>`, and use `'use cache'` for shell-worthy data. Dynamic routes need `generateStaticParams` returning ≥1 param for App Shell validation.
