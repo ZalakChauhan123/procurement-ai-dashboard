@@ -5,6 +5,7 @@ import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import Footer from "./layout/footer/page";
 import { AppSidebar } from "./layout/vertical/sidebar/app-sidebar";
 import { cn } from "@/lib/utils";
+import RouteErrorBoundary from "@/app/components/shared/route-error-boundary";
 
 export default function Layout({
   children,
@@ -21,7 +22,9 @@ export default function Layout({
         <Header />
         <div className="flex flex-1 flex-col gap-4 p-4">
           <div className={cn("w-full mx-auto", "container")}>
-            <div className=" min-h-[calc(100vh-140px)]">{children}</div>
+            <div className=" min-h-[calc(100vh-140px)]">
+              <RouteErrorBoundary title="Page error">{children}</RouteErrorBoundary>
+            </div>
             <div className="pt-6">
               <Footer />
             </div>
