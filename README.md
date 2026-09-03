@@ -1,257 +1,327 @@
-<p align="center">
-   <a href="https://shadcndashboard.dev" target="_blank">
-      <img src="https://shadcndashboard-demo.vercel.app/images/logos/logoicon.svg" alt="shadcndashboard-logo" width="50px" height="50px">
-   </a>
-</p>
+# Procurement AI Dashboard
 
-<h1 align="center">
-   <a href="https://shadcndashboard.dev" target="_blank" align="center">
-      Shadcn Dashboard - Free Shadcn Admin Dashboard Template (Next.js)
-   </a>
-</h1>
+An AI-powered procurement management dashboard built with **Next.js, React, TypeScript, Tailwind CSS, and component-based UI architecture**.
 
-<p align="start">Shadcn Dashboard is a modern, responsive admin dashboard template built with Next.js (App Router), Shadcn UI, Base UI, and Tailwind CSS v4. It ships with a modern dashboard, Blog, Notes & Tickets apps, authentication pages, form layouts, data tables, user profile, and a rich UI component library - giving you everything you need to build your next admin panel faster.
+The project focuses on creating a modern enterprise-style interface for managing procurement activities, including purchase requests, suppliers, approvals, analytics, and AI-assisted workflows.
 
-<kbd>[![Shadcn Dashboard - Demo Screenshot](https://shadcndashboard-demo.vercel.app/OG-Image.png)](https://shadcndashboard.dev)</kbd>
+## Overview
 
-## Introduction 📊
+**Procurement AI Dashboard** is a responsive web application designed to explore how modern UX/UI design, frontend development, and AI-assisted workflows can be combined into an enterprise product experience.
 
-Shadcn Dashboard is built with Next.js (App Router), offering a production-ready admin dashboard starter to kickstart your next project. It features a modern dashboard, Blog, Notes & Tickets apps, authentication flows, form layouts with validation, data tables, user profile pages, and a comprehensive library of Shadcn UI components.
+The project is being developed with a focus on:
 
-[View Demo](https://shadcndashboard-demo.vercel.app)
+* User-centered product design
+* Reusable UI components
+* Design-system-driven development
+* Responsive enterprise interfaces
+* Data visualization
+* Procurement workflows
+* AI-assisted functionality
+* AI-agent and workflow concepts
 
-[View Documentation](https://shadcndashboard.dev/docs)
+## Key Features
 
-<p>
-   Crafted with ❤️ by
-   <a href="https://shadcndashboard.dev" target="_blank">
-      shadcndashboard.dev
-   </a>
-   , committed to empowering the open-source community.
-</p>
+### 📊 Procurement Dashboard
 
-## Key Features ✨
+* Procurement overview
+* Key performance indicators
+* Spending and purchasing insights
+* Interactive charts and data visualizations
+* Recent procurement activity
 
-- **Modern Dashboard** - Ready-to-use dashboard layout with statistics, charts, and widgets
-- **Apps** - Blog, Notes, and Tickets apps out of the box
-- **Authentication Pages** - Login, Register, Forgot Password, OTP Verification, Reset Password, Two-Factor Auth
-- **Forms & Tables** - Vertical & Horizontal form layouts, form validation, and a data table
-- **User Profile** - Rich profile page with connections and activity views
-- **Built with Next.js 16 / React 19** - Modern, fast, and SEO-friendly
-- **Tailwind CSS v4** - Easy theming and utility-based styling
-- **Responsive & Mobile-First** - Designed to look great on all devices
-- **Dark Mode Support** - Full light/dark theme toggle via `next-themes`
-- **Rich Charting** - Recharts integration for beautiful visualizations
-- **Rich Text Editor** - TipTap-powered editor for the Blog app
+### 📋 Purchase Requests
 
-## Folder Structure
+* View purchase requests
+* Request status tracking
+* Request details
+* Approval-oriented workflows
+* Search and filtering
 
+### 🏢 Supplier Management
+
+* Supplier overview
+* Supplier information
+* Supplier status
+* Procurement-related supplier data
+
+### 📄 Contract Management
+
+* Contract overview
+* Contract status
+* Important contract information
+* Expiration tracking
+
+### ✅ Approval Workflows
+
+* Request approval interface
+* Approval status
+* Pending actions
+* Workflow-oriented UI
+
+### 🤖 AI Assistant
+
+The dashboard is designed to support an AI assistant for procurement-related tasks.
+
+Example interactions:
+
+> "Show me all purchase requests above €10,000."
+
+> "Which supplier contracts expire within 30 days?"
+
+> "Create a purchase request for 20 laptops."
+
+The AI assistant is intended to demonstrate how AI agents can interact with application data and workflows rather than functioning only as a traditional chat interface.
+
+## UX / UI Design
+
+The interface is developed around a reusable design system and component-based approach.
+
+### Design principles
+
+* User-centered design
+* Clear information hierarchy
+* Consistent visual language
+* Responsive layouts
+* Accessible interaction patterns
+* Reusable components
+* Data-dense enterprise UI
+* Minimal cognitive friction
+
+### Design System
+
+The project uses reusable UI patterns for:
+
+* Buttons
+* Inputs
+* Forms
+* Cards
+* Tables
+* Dialogs
+* Dropdowns
+* Navigation
+* Tabs
+* Status indicators
+* Charts
+* Dashboard widgets
+
+The goal is to maintain consistency across different product areas while allowing components to evolve as the application grows.
+
+## Technology Stack
+
+### Frontend
+
+* **Next.js**
+* **React**
+* **TypeScript**
+* **Tailwind CSS**
+* HTML5
+* CSS3
+
+### UI
+
+* Component-based architecture
+* shadcn/ui components
+* Responsive design
+* Dark / light theme support
+
+### Data & Validation
+
+* React-based data handling
+* Form validation
+* Data tables
+* Charts and visualization
+
+### AI Development
+
+* AI-assisted development
+* AI coding agents
+* Prompt engineering
+* AI agent workflows
+
+## Project Structure
+
+```text
+procurement-ai-dashboard/
+│
+├── app/
+│   ├── api/
+│   ├── auth/
+│   └── dashboard/
+│
+├── components/
+│   ├── ui/
+│   ├── dashboard/
+│   ├── procurement/
+│   ├── suppliers/
+│   ├── contracts/
+│   └── ai-assistant/
+│
+├── hooks/
+├── lib/
+├── public/
+│
+├── components.json
+├── next.config.ts
+├── package.json
+├── tsconfig.json
+└── README.md
 ```
-|-- public/                                    # Static assets served from the site root
-|-- app/                                       # Next.js App Router routes and layouts
-|   |-- globals.css                            # Tailwind CSS, CSS variables, and theme tokens
-|   |-- layout.tsx                             # Root layout, fonts, metadata, and providers
-|   |-- not-found.tsx                          # Custom 404 page
-|   |-- api/                                   # Route handlers (blog, notes, tickets)
-|   |-- auth/                                  # Auth routes (outside dashboard shell)
-|   |   |-- auth2/                             # Two-factor authentication pages
-|   |   |-- authforms/                         # Login, Register, Forgot Password, etc.
-|   |   |-- error/                             # Error pages
-|   |   |-- maintenance/                       # Maintenance page
-|   |-- (dashboard-layout)/                    # Routes with sidebar + header shell
-|   |   |-- layout.tsx                         # Dashboard shell layout (Sidebar + Header)
-|   |   |-- page.tsx                           # Main dashboard page
-|   |   |-- apps/                              # App routes (blog, notes, tickets)
-|   |   |-- pages/                             # Inner page routes (form, tables, user-profile)
-|   |   |-- layout/                            # Dashboard layout components (header, sidebar, footer)
-|   |   |-- icons/                             # Icon pages
-|   |   |-- types/                             # Route-level TypeScript types
-|   |-- components/                            # App-scoped React components
-|   |   |-- animated-components/               # Motion/animation-driven components
-|   |   |-- apps/                              # Components for Blog, Notes, Tickets apps
-|   |   |-- dashboards/                        # Dashboard widgets, stats, and charts
-|   |   |-- icons/                             # Icon showcase components
-|   |   |-- shared/                            # Shared cards, dialogs, and wrappers
-|   |   |-- tables/                            # Data table components
-|   |   |-- user-profile/                      # User profile components
-|   |-- context/                               # React context providers (blog, notes, tickets)
-|   |-- css/                                   # Page and style-specific CSS
-|-- components/                                # Shared, non-app-scoped React components
-|   |-- ui/                                    # shadcn/ui primitives
-|   |-- Themeprovider.tsx                      # Theme provider wrapper
-|-- hooks/                                     # Reusable client hooks
-|-- lib/                                       # General utilities and shared helpers
-|-- components.json                            # shadcn/ui aliases and registry config
-|-- eslint.config.mjs                          # ESLint configuration
-|-- next.config.ts                             # Next.js configuration
-|-- package.json                               # Scripts and dependencies
-|-- postcss.config.mjs                         # Tailwind CSS v4 PostCSS setup
-|-- tsconfig.json                              # TypeScript compiler and path aliases
-```
 
-**Key UI Sections**
-
-- **Dashboard** - Modern overview with statistics, charts, and widgets
-- **Apps** - Blog, Notes, and Tickets management
-- **Authentication** - Login, Register, and account recovery flows
-- **Forms & Tables** - Layouts, validation, and data table views
-- **User Pages** - Profile page with connections and activity
-
----
-
-## What's Included 📦
-
-- Dashboard
-  - Modern Dashboard
-- Apps
-  - Blog
-  - Notes
-  - Tickets
-- Pages
-  - User Profile
-  - Form Layouts
-  - Form Validation
-  - Data Table
-- Authentication
-  - Login Page
-  - Register Page
-  - Forgot Password Page
-  - OTP Verification Page
-  - Reset Password Page
-  - Two Steps Verification Page
-  - Error Page
-  - Maintenance Page
-- Components
-  - Shadcn UI Primitives
-  - Recharts
-  - TipTap Rich Text Editor
-  - Data Tables
-  - Date Pickers & Calendar
-  - File Dropzone
-  - OTP Input
-- Miscellaneous
-  - Icons Showcase
-  - Dark / Light Mode 
-  
-
-## 🚀 Quick Start
+## Getting Started
 
 ### Prerequisites
 
-- Node.js 18, 20, or 22+
-- pnpm (recommended) or npm
+Make sure you have the following installed:
 
-### Getting Started
+* Node.js 18+
+* npm or pnpm
+* Git
 
-1. **Install dependencies:**
+### Installation
 
-   ```bash
-   pnpm install
-   ```
+Clone the repository:
 
-2. **Start the development server:**
+```bash
+git clone https://github.com/ZalakChauhan123/procurement-ai-dashboard.git
+```
 
-   ```bash
-   pnpm dev
-   ```
+Navigate to the project:
 
-   The site will be available at `http://localhost:3000`
+```bash
+cd procurement-ai-dashboard
+```
 
-3. **Build for production:**
+Install dependencies:
 
-   ```bash
-   pnpm build
-   ```
+```bash
+npm install
+```
 
-4. **Preview the production build:**
+### Development
 
-   ```bash
-   pnpm start
-   ```
+Start the development server:
 
-## 🧞 Available Commands
+```bash
+npm run dev
+```
 
-All scripts can be run using your package manager of choice (npm, pnpm, yarn, or bun).
+Open:
 
-| Command | Action                                                                           |
-| :------ | :------------------------------------------------------------------------------- |
-| `dev`   | Starts the Next.js development server with hot-reload at `http://localhost:3000` |
-| `build` | Creates an optimized production build of your application                        |
-| `start` | Serves the production build locally for testing before deployment                |
-| `lint`  | Runs ESLint to check for potential errors and code quality issues                |
+```text
+http://localhost:3000
+```
 
-## Documentation 📚
+### Production Build
 
-For comprehensive documentation, please visit [shadcndashboard.dev/docs](https://shadcndashboard.dev/docs).
+Create a production build:
 
-## Changelog 📆
+```bash
+npm run build
+```
 
-Please refer to the [CHANGELOG file](CHANGELOG.md). We add detailed release notes to each new release.
+Start the production server:
 
-## License ©
+```bash
+npm start
+```
 
-- Copyright © [shadcndashboard.dev](https://shadcndashboard.dev/)
-- Licensed under [MIT](LICENSE)
-- All our free items are Open Source and licensed under MIT. You can use our free items for personal as well as commercial purposes. We just need attribution from your end. Copy the link below and paste it in the footer of your web application or project.
-  ```html
-  <a href="https://shadcndashboard.dev/">Shadcn Dashboard</a>
-  ```
+### Linting
 
----
+Run the linter:
 
-<br />
+```bash
+npm run lint
+```
 
-<a href="https://shadcndashboard.dev" target="_blank">
-  <img src="https://shadcndashboard.dev/images/og-image/homepage.webp" alt="shadcndashboard banner" width="1200">
-</a>
+## Development Approach
 
-<p>
-   <a href="https://shadcndashboard.dev" target="_blank">
-      shadcndashboard.dev
-   </a>
-   is a free and open-source admin dashboard template built with Shadcn UI, Base UI, Tailwind CSS v4, and Next.js - designed to help developers ship beautiful admin panels faster. 🚀
-</p>
+This project follows an iterative product-development approach.
 
-## Overview 🌏
+```text
+User / Business Requirement
+          ↓
+       UX Design
+          ↓
+   Figma Prototype
+          ↓
+   Component Design
+          ↓
+ React + TypeScript
+          ↓
+     Next.js
+          ↓
+   Product Feature
+          ↓
+ Usability Evaluation
+          ↓
+      Iteration
+```
 
-Shadcn Dashboard is a production-ready admin dashboard kit built with Next.js, TypeScript, Tailwind CSS v4, Shadcn UI, and Base UI. It ships with reusable UI blocks, a full component library, pre-built app pages, and authentication flows - so you can go from zero to a fully functional admin panel in minutes.
+AI coding tools are used as development assistants. Generated code and suggestions are reviewed, tested, and adapted before being incorporated into the application.
 
-- Production-ready blocks: dashboards, charts, tables, forms, and full apps
-- Built on Base UI primitives for full design control
+## AI-Assisted Development
 
-### Backed by WrapPixel 🏆
+AI tools are used throughout development for:
 
-Shadcn Dashboard is proudly backed by [WrapPixel](https://wrappixel.com) - a trusted name in the admin dashboard space with over **15+ years** of experience building production-grade UI templates and component systems. WrapPixel's products are used by **600k+ developers and agencies** worldwide, consistently rated **4.9/5** for quality, consistency, and developer experience.
+* Code generation
+* Debugging
+* Refactoring
+* Technical exploration
+* Documentation
+* UI implementation
+* Development workflow assistance
 
-## Community 🤝
+The project emphasizes **human responsibility over AI-generated output**. AI is treated as a development tool rather than a replacement for engineering decisions.
 
-Join the Shadcn Dashboard community to ask questions, share ideas, and get help:
+## Roadmap
 
-- 🐦 [Follow us on Twitter](https://x.com/shadcndashboard)
-- 🎮 [Join us on Discord](https://discord.com/invite/eMzE8F6Wqs)
+* [x] Initial dashboard structure
+* [ ] Procurement dashboard
+* [ ] Purchase request management
+* [ ] Supplier management
+* [ ] Contract management
+* [ ] Approval workflows
+* [ ] Procurement analytics
+* [ ] AI procurement assistant
+* [ ] AI agent tool integration
+* [ ] API integrations
+* [ ] Usability testing
+* [ ] Performance optimization
+* [ ] Production deployment
 
-## Credits 🤘
+## Learning Goals
 
-We are grateful for the contributions of the open-source community, particularly:
+This project is also being developed as a practical exploration of modern product engineering, combining:
 
-- [shadcn/ui](https://ui.shadcn.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Next.js](https://nextjs.org/)
-- [Base UI](https://mui.com/base-ui/)
+* UX/UI Design
+* Design Systems
+* React
+* TypeScript
+* Next.js
+* Responsive Frontend Development
+* AI-Assisted Coding
+* AI Agents
+* Workflow-Oriented Product Development
 
-These projects form the backbone of Shadcn Dashboard.
+## Open Source & Attribution
 
-## Useful Links 🎁
+This project incorporates and builds upon open-source software and UI components.
 
-- [Shadcn Dashboard Website](https://shadcndashboard.dev)
-- [Documentation](https://shadcndashboard.dev/docs)
-- [Demo](https://shadcndashboard-demo.vercel.app/)
-- [Changelog](CHANGELOG.md)
-- [License](LICENSE)
-- [GitHub](https://github.com/shadcndashboard/next-shadcn-dashboard)
+Third-party libraries and frameworks remain subject to their respective licenses.
 
-## Social Media 🌐:
+In particular, this project uses **shadcn/ui**, along with other open-source technologies such as Next.js, React, Tailwind CSS, and related libraries.
 
-- [Twitter / X](https://x.com/shadcndashboard)
-- [Discord](https://discord.com/invite/eMzE8F6Wqs)
-- [GitHub](https://github.com/shadcndashboard/next-shadcn-dashboard)
+Please refer to the included `LICENSE` file and the licenses of individual dependencies for applicable terms.
+
+## License
+
+This project contains and builds upon open-source components. Please refer to the repository's `LICENSE` file and the respective licenses of third-party dependencies before redistributing the project.
+
+## Author
+
+**Zalak Chauhan**
+
+Computer Science Master's Student
+University of Paderborn
+
+GitHub: https://github.com/ZalakChauhan123
