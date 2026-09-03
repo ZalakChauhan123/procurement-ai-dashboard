@@ -15,8 +15,8 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "precurement ai Dashboard - Tailwind + Nextjs",
-  description: "Modern admin dashboard built with Next.js, Tailwind, and Shadcn.",
+  title: "ProcureAI",
+  description: "AI-powered procurement management platfor",
    openGraph: {
     title: "precurement ai dashboard - Tailwind + Shadcn Nextjs",
     description: "Modern admin dashboard built with Next.js, Tailwind, and Shadcn.",
